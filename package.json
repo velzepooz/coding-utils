@@ -1,16 +1,16 @@
 {
-  "name": "template",
+  "name": "coding-utils",
   "version": "0.0.0",
-  "description": "",
-  "main": "src/main.js",
-  "types": "types/main.d.ts",
+  "description": "Utils function for generate use",
+  "main": "src/coding-utils.js",
+  "types": "types/coding-utils.d.ts",
   "type": "module",
   "scripts": {
     "check": "npx tsc --project tsconfig.json",
     "types": "rm -rf types && npx tsc --project tsconfig.types.json",
     "lint": "eslint .",
     "fmt": "eslint --fix .",
-    "typedoc": "npx typedoc --plugin typedoc-plugin-coverage --coverageLabel docs --plugin typedoc-plugin-markdown --entryPointStrategy resolve packages ./src/main.js",
+    "typedoc": "npx typedoc --plugin typedoc-plugin-coverage --coverageLabel docs --plugin typedoc-plugin-markdown --entryPointStrategy resolve packages ./src/coding-utils.js",
     "docs": "npm run typedoc && npm run test:coverage",
     "test": "npx c8 --check-coverage --lines 85 --functions 90 --branches 85 --statements 85 tap --no-coverage",
     "test:coverage": "npx istanbul-cobertura-badger -e 85 -g 70 -b testCoverage -r coverage/cobertura-coverage.xml -d docs/",
@@ -21,11 +21,7 @@
     "url": ""
   },
   "keywords": [],
-  "author": {
-    "name": "",
-    "email": "",
-    "url": ""
-  },
+  "author": "velzepooz",
   "contributors": [],
   "license": "MIT",
   "bugs": {

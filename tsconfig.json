@@ -3,7 +3,7 @@
   "include": ["src/**/*"],
   "typedocOptions": {
 		"name": "Documentation",
-    "includeVersion": true,
+        "includeVersion": true,
 		"out": "docs",
 		"excludeExternals": true,
 		"readme": "README.md",
