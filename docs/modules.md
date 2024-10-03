@@ -4,132 +4,90 @@
 
 ## Table of contents
 
-### Classes
-
-- [DtsClass](classes/DtsClass.md)
-- [JSDocClass](classes/JSDocClass.md)
-
 ### Functions
 
-- [double](modules.md#double)
-- [dtsRandom](modules.md#dtsrandom)
-- [dtsSum](modules.md#dtssum)
-- [jsDocDouble](modules.md#jsdocdouble)
-- [jsDocRandom](modules.md#jsdocrandom)
-- [triple](modules.md#triple)
+- [capitalize](modules.md#capitalize)
+- [omit](modules.md#omit)
+- [unique](modules.md#unique)
 
 ## Functions
 
-### double
+### capitalize
 
-▸ **double**(`a`): `number`
+▸ **capitalize**(`string`): `string`
 
-double - function doubles a number
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[main.js:11](https://github.com/oldbros/library-template/blob/main/src/main.js#L11)
-
-___
-
-### dtsRandom
-
-▸ **dtsRandom**(): `DtsExampleType`
-
-Random
-
-#### Returns
-
-`DtsExampleType`
-
-#### Defined in
-
-[useDts.js:35](https://github.com/oldbros/library-template/blob/main/src/useDts.js#L35)
-
-___
-
-### dtsSum
-
-▸ **dtsSum**(`...args`): `number`
-
-Sum
+capitalize - function which capitalizes the first letter of a string and makes the rest lowercase.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `number`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `string` | `string` | The input string to capitalize. |
 
 #### Returns
 
-`number`
+`string`
+
+The capitalized string, or an empty string if input is not a string.
 
 #### Defined in
 
-dtsTypes.ts:12
+coding-utils.js:34
 
 ___
 
-### jsDocDouble
+### omit
 
-▸ **jsDocDouble**(`a`): `number`
+▸ **omit**(`obj`, `paths`): `Record`<`string`, `any`\>
+
+omit - function creates an object composed of the own
+and inherited enumerable property paths of `object` that are not omitted.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `obj` | `Record`<`string`, `any`\> | The source object |
+| `paths` | `string` \| `string`[] | The property paths to omit |
 
 #### Returns
 
-`number`
+`Record`<`string`, `any`\>
+
+A new object with the specified properties omitted
+
+**`Throws`**
+
+If the paths argument contains non-string elements or is not a string or array
 
 #### Defined in
 
-[.types.js:13](https://github.com/oldbros/library-template/blob/main/src/.types.js#L13)
+coding-utils.js:9
 
 ___
 
-### jsDocRandom
+### unique
 
-▸ **jsDocRandom**(): `Example`
+▸ **unique**(`array`): `any`[]
 
-#### Returns
-
-`Example`
-
-#### Defined in
-
-[useJsTypedef.js:25](https://github.com/oldbros/library-template/blob/main/src/useJsTypedef.js#L25)
-
-___
-
-### triple
-
-▸ **triple**(`a`): `number`
-
-triple - function triples a number
+unique -remove duplicated primitives from array
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `any`[] | The input array to remove duplicates from |
 
 #### Returns
 
-`number`
+`any`[]
+
+A new array with duplicates removed
+
+**`Throws`**
+
+If the input is not an array
 
 #### Defined in
 
-[main.js:15](https://github.com/oldbros/library-template/blob/main/src/main.js#L15)
+coding-utils.js:47
