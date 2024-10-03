@@ -4,7 +4,13 @@
   "description": "Utils function for generate use",
   "main": "src/coding-utils.js",
   "types": "types/coding-utils.d.ts",
-  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./src/coding-utils.js",
+      "import": "./src/coding-utils.js",
+      "types": "./types/coding-utils.d.ts"
+    }
+  },
   "scripts": {
     "check": "npx tsc --project tsconfig.json",
     "types": "rm -rf types && npx tsc --project tsconfig.types.json",

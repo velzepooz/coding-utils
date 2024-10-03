@@ -54,8 +54,12 @@ const unique = (array) => {
   return [...new Set(array)];
 };
 
-export {
+const codingUtils = {
   capitalize,
   omit,
   unique,
 };
+
+module.exports = codingUtils;
+module.exports.default = codingUtils;
+module.exports.codingUtils = codingUtils;
