@@ -7,21 +7,21 @@
  * @throws {Error} If the paths argument contains non-string elements or is not a string or array
  */
 const omit = (obj, paths) => {
-  if (Array.isArray(paths)) {
-    for (const path of paths) {
-      if (typeof path !== 'string') {
-        throw new Error('Error at omit function.Path to omit should be an array of strings');
-      }
-    }
+  if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+    throw new Error('Error at omit function. Object to omit should be a non-null object');
   }
 
   if (!Array.isArray(paths) && typeof paths !== 'string') {
-    throw new Error('Error at omit function. Paths to omit should be a string');
+    throw new Error('Error at omit function. Paths to omit should be a string or an array of strings');
+  }
+
+  if (Array.isArray(paths) && paths.some((path) => typeof path !== 'string')) {
+    throw new Error('Error at omit function. Path to omit should be an array of strings');
   }
 
   return Object.fromEntries(
-    Object.entries(obj).filter(([k]) =>
-      Array.isArray(paths) ? !paths.includes(k) : k !== paths,
+    Object.entries(obj).filter(([key]) =>
+      Array.isArray(paths) ? !paths.includes(key) : key !== paths,
     ),
   );
 };
