@@ -1,7 +1,7 @@
-import test from 'node:test';
-import assert from 'node:assert';
+const { test } = require('node:test');
+const assert = require('node:assert');
 
-import { capitalize, unique, omit } from './coding-utils.js';
+const { capitalize, unique, omit } = require('./coding-utils.js');
 
 test('unique function', () => {
   assert.deepStrictEqual(unique([1, 2, 2, 3, 4, 4, 5]), [1, 2, 3, 4, 5], 'Should remove duplicates from numbers');
