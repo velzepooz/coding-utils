@@ -1,6 +1,6 @@
 {
   "name": "@velzepooz/coding-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utils function for generate use",
   "main": "src/coding-utils.js",
   "types": "types/coding-utils.d.ts",
