@@ -25,9 +25,9 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oldbros/shiftjs/issues"
+    "url": "https://github.com/velzepooz/coding-utils/issues"
   },
-  "homepage": "https://github.com/oldbros/shiftjs#readme",
+  "homepage": "https://github.com/velzepooz/coding-utils#readme",
   "devDependencies": {
     "@oldbros/tsconfig": "^1.0.2",
     "@types/node": "^18.16.0",
